@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary" (click)="newWod()"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New Wod</button>
+                    <!-- <button class="btn btn-secondary" (click)="announcement()"><i class="fa fa-bullhorn" aria-hidden="true"></i> New Announcement</button>                       -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <unpublished-posts [page]="page"></unpublished-posts>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <published-posts [page]="page"></published-posts>
+        </div>
+    </div>
+</div>

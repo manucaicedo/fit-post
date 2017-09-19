@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <form class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <label for="Post" class="col-xs-12 col-lg-1 control-label">Post</label>
+                <div class="col-lg-11">
+                    <textarea class="form-control" name="pst" id="post" rows="3" [(ngModel)]="postContent"></textarea>
+                </div>
+            </div>
+            <div class="form-check pull-right">
+                    <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" name="doPublish" [(ngModel)]="doPublish">
+                          Publish now
+                    </label>
+                </div>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-default btn-sm pull-right" (click)="postAnnouncement()">Submit</button>
+                </div>
+            </div>
+            
+        </fieldset>
+    </form>
+</div>

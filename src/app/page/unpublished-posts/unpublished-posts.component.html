@@ -1,0 +1,11 @@
+<div class="panel panel-primary upcoming-panel">
+    <div class="panel-heading">Upcoming Posts</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-12">
+                <h6 *ngIf="empty">No scheduled posts.</h6>
+              <single-post *ngFor="let post of posts" [post]="post" [isPublished]=false></single-post>
+            </div>
+          </div>
+    </div>
+  </div>

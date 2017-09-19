@@ -1,0 +1,13 @@
+.page-name-header{
+    background-color: lightgray;
+    margin-bottom: 15px;
+    padding:10px;
+    color: black;
+}
+img{
+    max-height: 70px;
+}
+.nav-pills{
+    margin-top:10px;
+    background-color: white;
+}

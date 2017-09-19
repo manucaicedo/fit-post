@@ -1,0 +1,21 @@
+<div class="row page-name-header">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-1 col-xs-offset-2">
+                <img src={{page.picture.data.url}} alt="">
+            </div>
+            <div class="col-xs-4">
+                <h3>{{page.name}}</h3>                 
+            </div>
+            <div class="col-xs-12 col-md-3 tabs">
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" [routerLinkActive]="['active']"><a [routerLink]="['feed']">Posts</a></li>
+                    <li role="presentation" [routerLinkActive]="['active']"><a [routerLink]="['ads']">Ads</a></li>
+                </ul>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

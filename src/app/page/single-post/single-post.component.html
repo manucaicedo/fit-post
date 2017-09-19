@@ -1,0 +1,40 @@
+<div class="panel panel-default col-lg-12" *ngIf="!deleted">
+        <div class="panel-body">
+                <div class="row">
+                        <div class="col-xs-8">
+                                <h5 *ngFor="let line of lines" >{{line}}</h5>
+                                <img class="img-thumbnail" *ngIf="post.picture" src={{post.picture}}>
+                                <div class="row" *ngIf="isPublished">
+                                        <div class="col-xs-12">
+                                                <span class="label label-success">{{post.likes}} <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span>
+                                                <span class="label label-info">{{post.reach}} <i class="fa fa-eye" aria-hidden="true"></i></span>
+                                        </div>
+                                </div> 
+                        </div>
+                        <div class="col-xs-4">
+                                <div class="row">
+                                        <div class="col-xs-12">
+                                                <label class="pull-right" for="date"><i class="fa fa-clock-o" aria-hidden="true" *ngIf="scheduled"></i> {{post.date}}</label>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-xs-12">
+                                                <label class="pull-right" for="date">{{post.time}}</label>
+                                        </div>
+                                </div>
+                                <div class="row" >
+                                        <div class="col-xs-12">
+                                                <a href="#" class="btn btn-default dropdown-toggle btn-xs pull-right" data-toggle="dropdown" aria-expanded="true">
+                                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                <li><a href={{fbURL}}><i class="fa fa-facebook-square" aria-hidden="true"></i> Open in FB </a></li>
+                                                <li><a (click)=deletePost(post.id)><i class="fa fa-trash" aria-hidden="true"></i> Delete</a></li>
+                                                <!-- <li><a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i> Boost</a></li> -->
+                                                </ul>
+                                        </div>
+                                </div>
+                        </div>
+                </div>  
+        </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+
+    <div class="panel-heading">Page Feed
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label for="Post" class="col-xs-12">New Post</label>
+                    <div class="col-lg-12">
+                        <textarea class="form-control" name="pst" id="post" rows="2" [(ngModel)]="postContent"></textarea>
+                    </div>
+                </div>
+                <!-- <span>City</span> <input type="text" [(ngModel)]="city" name="city" > -->
+                <!-- <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" [(ngModel)]="city">
+                          City <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#dropdown1" data-toggle="tab">New York</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#dropdown2" data-toggle="tab">San Francisco</a></li>
+                        </ul>
+                      </li> -->
+                      <div>
+                            <label>City</label>
+                            <div>
+                                <select name="city" [(ngModel)]="city">
+                                    <option >New York</option>
+                                    <option >San Francisco</option>
+                                </select>
+                            </div>
+                        </div>
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <button type="submit" class="btn btn-primary btn-sm pull-right" (click)="submitPost()">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <hr/>
+          <div class="row">
+            <div class="col-xs-12">
+                <h6 *ngIf="empty">No posts in feed. Post something!</h6>
+              <single-post *ngFor="let post of posts" [post]="post" [isPublished]=true></single-post>
+              <button *ngIf="morePosts" type="button" class="btn btn-default col-xs-12 btn-xs" (click)="fetchMorePosts()">Load more</button>
+            </div>
+
+          </div>
+    </div>
+  </div>
